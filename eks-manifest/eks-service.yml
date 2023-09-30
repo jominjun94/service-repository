@@ -5,11 +5,16 @@ metadata:
   labels:
     app: eks-project
 spec:
-  selector:
-    app: eks-project
-  type: NodePort
   ports:
     - port: 8080
       targetPort: 8080
-      nodePort: 32000
+      protocol: TCP
+  selector:
+    app: eks-project
+  externalTrafficPolicy: Cluster
+  sessionAffinity: None
+  type: LoadBalancer
+
       
+
+
