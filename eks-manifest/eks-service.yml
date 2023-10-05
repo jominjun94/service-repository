@@ -11,9 +11,7 @@ spec:
       protocol: TCP
   selector:
     app: eks-project
-  externalTrafficPolicy: Cluster
-  sessionAffinity: None
-  type: LoadBalancer
+  type: NodePort
 
       
 
